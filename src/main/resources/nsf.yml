@@ -1,0 +1,30 @@
+nsf:
+  type: http
+  version: '2.0'
+  nsfServer: 'http://nsf-server-cust92-env2.netease.com'
+  application:
+    name: zctest1v1
+    version: '1'
+    projectCode: zc-test
+    envCode: prod2
+    zone: default
+    group: default
+    tags: []
+  authority:
+    accessKey: 1bcae5f70856478ea035cd8e162221c8
+    secretKey: 7e9d42317e824c15b601d13b27b32d5a
+  manager:
+    patterns:
+      - className: com/example/zctest1v1/Zctest1v1Application
+        methods:
+          - name: getdate1
+          - name: zctest1
+          - name: failback
+#  relations:
+#    services: # 地址-服务名转换关系配置
+#      - address: http://localhost:7001/getdate
+#        service: http://nsf-zctest-getdate
+#    versions: # 服务-版本号映射关系配置
+#      - service: nsf-zctest-getdate
+#        version: 0.1
+
